@@ -14,6 +14,12 @@ allprojects {
         google()
         jcenter()
     }
+
+    configurations.all {
+        resolutionStrategy.force "com.facebook.android:facebook-core:4.39.0"
+        resolutionStrategy.force "com.facebook.android:facebook-login:4.39.0"
+        resolutionStrategy.force "com.facebook.android:facebook-common:4.39.0"
+    }
 }
 
 rootProject.buildDir = '../build'
